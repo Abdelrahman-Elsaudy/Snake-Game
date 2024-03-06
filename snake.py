@@ -4,6 +4,7 @@ from turtle import Turtle
 class Snake:
     def __init__(self):
         self.list = []
+        self.head = None
 
     def creation(self):
         for part in range(3):  # Initiating a snake that consists of 3 dots as a start.
@@ -27,7 +28,7 @@ class Snake:
         self.head.forward(20)
 
     def up(self):
-        if self.head.heading() != 270:
+        if self.head.heading() != 270:  # Making sure it doesn't go in the opposite direction with one click.
             self.head.seth(90)
 
     def down(self):
